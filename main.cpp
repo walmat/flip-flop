@@ -6,15 +6,17 @@
 //
 
 #include "bot.h"
-#include <iostream>
+#include "mainwindow.h"
+#include <QApplication>
 
 using namespace std;
 
-int main() {
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
     
-    bot bot_start;
-    bot_start.start();
-    
-    return 0;
-    
+    return a.exec();
 }
+
